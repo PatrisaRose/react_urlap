@@ -1,9 +1,12 @@
 import { useState } from "react";
 
-export default function Urlap() {
+export default function Urlap(props) {
   const [obj, setObj] = useState({ nev: "", szul: 2022 });
+
   function kuld(event) {
     event.preventDefault();
+    console.log(obj);
+    props.kuld(obj);
   }
   function adatValt(event) {
     console.log(event.target);
